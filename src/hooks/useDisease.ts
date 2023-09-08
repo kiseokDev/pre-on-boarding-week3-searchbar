@@ -10,7 +10,7 @@ const DEBOUNCE_TIME = 300;
 export const useDiseaseSearch = (initialQuery: string) => {
   const { cache, setCache } = useCache();
   const [query, setQuery] = useState(initialQuery);
-  const [results, setResults] = useState<SickType[]>([]);
+  const [diseases, setDiseases] = useState<SickType[]>([]);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
   // 캐시데이터 사용하거나 새로운 데이터 가져오기
@@ -18,7 +18,7 @@ export const useDiseaseSearch = (initialQuery: string) => {
     const cachedResults = isDataCached(cache, query) ? cache[query].data : null;
 
     if (cachedResults) {
-      setResults(cachedResults);
+      setDiseases(cachedResults);
       return;
     }
     try {
@@ -27,8 +27,7 @@ export const useDiseaseSearch = (initialQuery: string) => {
         ...prevCache,
         [query]: { data, timestamp: Date.now() },
       }));
-      console.log(cache);
-      setResults(data);
+      setDiseases(data);
     } catch (error) {
       console.log(error);
     }
@@ -41,7 +40,7 @@ export const useDiseaseSearch = (initialQuery: string) => {
     }
 
     if (!query) {
-      setResults([]);
+      setDiseases([]);
       return;
     }
 
@@ -61,6 +60,6 @@ export const useDiseaseSearch = (initialQuery: string) => {
   return {
     query,
     setQuery,
-    results,
+    diseases,
   };
 };
