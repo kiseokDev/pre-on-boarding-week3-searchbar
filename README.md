@@ -1,10 +1,5 @@
 
-
-
-
-
 # 한국임상정보 사이트 검색창
-
 질환명 검색시 API 호출 통해서 검색어 추천 기능 구현하기
 - 검색창 구현
 - 검색어 추천 기능 구현
@@ -27,10 +22,9 @@
 
 ## 🔗 배포 링크
 
-[https://pre-on-boarding-week2-gitissue.vercel.app/](https://pre-on-boarding-week3-searchbar.vercel.app/)
+https://pre-on-boarding-week2-gitissue.vercel.app/
 
-![image](https://github.com/kiseokDev/pre-on-boarding-week3-searchbar/assets/107299502/7212381f-660e-46d3-9c90-f93bf8e5d2e0)
-
+![image](https://github.com/kiseokDev/pre-on-boarding-week2-gitissue/assets/107299502/dab41e2b-4319-4dd3-8487-66d34c8b75fb)
 
 
 <br>
@@ -75,6 +69,4 @@ project-root/
 <img src="https://img.shields.io/badge/Typescript-blue?style=square"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/Axios-56347C?style=flat-square&logo=Axios&logoColor=white"/> <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styled-components&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Amazon Amplify-569A31?style=flat-square&logo=Amazon S3&logoColor=white"/>
 <br>
 <br>
-
-
 
