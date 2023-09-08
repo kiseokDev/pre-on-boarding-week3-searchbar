@@ -1,48 +1,80 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# 한국임상정보 사이트 검색창
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+질환명 검색시 API 호출 통해서 검색어 추천 기능 구현하기
+- 검색창 구현
+- 검색어 추천 기능 구현
+- 캐싱 기능 구현 (라이브러리 사용하지 않고)
+- 키보드만으로 추천 검색어들로 이동 가능하도록 구현
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 목차
 
-### `npm run build`
+- [과제목표](#과제목표)
+- [목차](#목차)
+  - [🔗 배포 링크](#-배포-링크)
+  - [⚙️ 실행 방법](#️-실행-방법)
+  - [📂 폴더 구조](#-폴더-구조)
+  - [🛠️ 기술 스택](#️-기술-스택)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔗 배포 링크
 
-### `npm run eject`
+[https://pre-on-boarding-week2-gitissue.vercel.app/](https://pre-on-boarding-week3-searchbar.vercel.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![image](https://github.com/kiseokDev/pre-on-boarding-week3-searchbar/assets/107299502/7212381f-660e-46d3-9c90-f93bf8e5d2e0)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+## ⚙️ 실행 방법
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install
+npm run start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- git clone후, 위의 명령어를 순서대로 실행하면 프로젝트를 이용하실 수 있습니다.
 
-# pre-on-boarding-week3-searchbar
+<br>
+
+
+
+## 📂 폴더 구조
+
+```
+project-root/
+│
+├── 📂 public/ # 정적 파일들
+│
+├── 📂 src/ # 소스 코드
+│ ├── 📂 api/           # api 함수들
+│ ├── 📂 components/    # 재사용 가능한 컴포넌트들
+│ ├── 📂 hooks/         # custom hooks
+│ ├── 📂 pages/         # 페이지 또는 뷰 컴포넌트
+│ ├── 📂 types/         # type 관리 폴더
+│ ├── 📂 feature/       # 요구사항 기능 함수
+│ ├── 📂 App.tsx        # App 컴포넌트
+│ ├── index.tsx      # 진입점 파일
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+<br>
+
+## 🛠️ 기술 스택
+
+<img src="https://img.shields.io/badge/Typescript-blue?style=square"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/Axios-56347C?style=flat-square&logo=Axios&logoColor=white"/> <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styled-components&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Amazon Amplify-569A31?style=flat-square&logo=Amazon S3&logoColor=white"/>
+<br>
+<br>
+
+
+
