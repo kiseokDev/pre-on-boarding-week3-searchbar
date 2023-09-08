@@ -2,7 +2,8 @@ import { SickType } from '../types/sickType';
 import { AxiosHttpClient } from './axiosHttpClient';
 
 // const server = process.env.REACT_APP_SERVER_URL;
-const server = process.env.REACT_APP_LOCAL_URL;
+// const server = process.env.REACT_APP_LOCAL_URL;
+const server = process.env.REACT_APP_DISEASE_DB;
 
 if (!server) {
   throw new Error('REACT_APP_SERVER_URL is not set');
