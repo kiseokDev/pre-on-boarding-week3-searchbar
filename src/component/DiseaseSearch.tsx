@@ -11,16 +11,25 @@ const DiseaseSearch: React.FC = () => {
   };
 
   const moveKeyword = (event: React.KeyboardEvent) => {
-    if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown' && event.key !== 'Enter') return;
+    if (
+      event.key !== 'ArrowUp' &&
+      event.key !== 'ArrowDown' &&
+      event.key !== 'Enter'
+    )
+      return;
     if (event.nativeEvent.isComposing) return;
 
     if (diseases.length > 0) {
       switch (event.key) {
         case 'ArrowUp':
-          setSelectedIndex((prevIndex) => (prevIndex <= 0 ? diseases.length - 1 : prevIndex - 1));
+          setSelectedIndex(prevIndex =>
+            prevIndex <= 0 ? diseases.length - 1 : prevIndex - 1
+          );
           break;
         case 'ArrowDown':
-          setSelectedIndex((prevIndex) => (prevIndex >= diseases.length - 1 ? 0 : prevIndex + 1));
+          setSelectedIndex(prevIndex =>
+            prevIndex >= diseases.length - 1 ? 0 : prevIndex + 1
+          );
           break;
         case 'Enter':
           if (diseases[selectedIndex]) {
@@ -37,10 +46,10 @@ const DiseaseSearch: React.FC = () => {
   return (
     <div>
       <input
-        type='text'
+        type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder='질환명 검색...'
+        onChange={e => setQuery(e.target.value)}
+        placeholder="질환명 검색..."
       />
       {/* <ul>
         {results.length > 0

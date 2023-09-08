@@ -16,7 +16,11 @@ interface CacheProviderProps {
 const CacheProvider: React.FC<CacheProviderProps> = ({ children }) => {
   const [cache, setCache] = useState<CacheState>({});
 
-  return <CacheContext.Provider value={{ cache, setCache }}>{children}</CacheContext.Provider>;
+  return (
+    <CacheContext.Provider value={{ cache, setCache }}>
+      {children}
+    </CacheContext.Provider>
+  );
 };
 
 const useCache = () => {

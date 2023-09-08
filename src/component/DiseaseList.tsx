@@ -19,7 +19,11 @@ const DiseaseList: React.FC<SelectProps> = ({ diseases, selectedIndex }) => {
         diseases.map((diseaseItem, index) => {
           const isSelected = index === selectedIndex;
           return (
-            <DiseaseItem key={diseaseItem.sickCd} disease={diseaseItem} $isSelected={isSelected} />
+            <DiseaseItem
+              key={diseaseItem.sickCd}
+              disease={diseaseItem}
+              $isSelected={isSelected}
+            />
           );
         })
       )}

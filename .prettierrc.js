@@ -1,14 +1,10 @@
 module.exports = {
-  bracketSpacing: true,
-  jsxBracketSameLine: false,
-  jsxSingleQuote: true,
+  arrowParens: 'avoid', // arrow function parameter가 하나일 경우 괄호 생략
   singleQuote: true,
-  proseWrap: 'preserve',
   semi: true,
-  printWidth: 100,
-  endOfLine: 'lf',
   useTabs: false,
   tabWidth: 2,
   trailingComma: 'es5',
-  arrowParens: 'always',
+  printWidth: 80,
+  bracketSpacing: true,
 };

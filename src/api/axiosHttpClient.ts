@@ -30,7 +30,10 @@ export class AxiosHttpClient {
   }
 
   public async get<T>(endPoint: string, option = {}): Promise<T> {
-    const response: AxiosResponse<T> = await this.#axiosInstance.get<T>(`${endPoint}`, option);
+    const response: AxiosResponse<T> = await this.#axiosInstance.get<T>(
+      `${endPoint}`,
+      option
+    );
     return response.data;
   }
 }
