@@ -9,6 +9,6 @@ module.exports = {
   endOfLine: 'lf',
   useTabs: false,
   tabWidth: 2,
-  trailingComma: 'all',
+  trailingComma: 'es5',
   arrowParens: 'always',
 };

@@ -13,6 +13,7 @@ export const useDiseaseSearch = (initialQuery: string) => {
   const [results, setResults] = useState<SickType[]>([]);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
+  // 캐시데이터 사용하거나 새로운 데이터 가져오기
   const fetchData = async () => {
     const cachedResults = isDataCached(cache, query) ? cache[query].data : null;
 
@@ -20,7 +21,6 @@ export const useDiseaseSearch = (initialQuery: string) => {
       setResults(cachedResults);
       return;
     }
-
     try {
       const data = await api.getDiseaseList(query);
       setCache((prevCache) => ({
@@ -34,6 +34,7 @@ export const useDiseaseSearch = (initialQuery: string) => {
     }
   };
 
+  //Debounce
   useEffect(() => {
     if (timeoutId) {
       clearTimeout(timeoutId);

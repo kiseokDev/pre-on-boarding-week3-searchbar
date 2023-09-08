@@ -13,7 +13,7 @@ instance.interceptors.response.use(
   function (error: AxiosError) {
     console.error('Error', error.message);
     return Promise.reject(error);
-  },
+  }
 );
 
 export class AxiosHttpClient {
