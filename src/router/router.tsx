@@ -1,5 +1,6 @@
 import App from 'App';
 import { CacheProvider } from 'context/CacheContext';
+import { InputKeywordProvider } from 'context/useInputKeywordContext';
 import Home from 'page/Home';
 import { createBrowserRouter } from 'react-router-dom';
 
@@ -11,9 +12,11 @@ const router = createBrowserRouter([
       {
         index: true,
         element: (
-          <CacheProvider>
-            <Home></Home>
-          </CacheProvider>
+          <InputKeywordProvider>
+            <CacheProvider>
+              <Home></Home>
+            </CacheProvider>
+          </InputKeywordProvider>
         ),
       },
     ],

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { useDiseaseSearch } from '../hooks/useDisease';
 import DiseaseList from '../component/DiseaseList';
+import Input from './common/Input';
+import Button from './common/Button';
+import styled from 'styled-components';
 
 const DiseaseSearch: React.FC = () => {
-  const { query, setQuery, diseases } = useDiseaseSearch('');
+  const { diseases } = useDiseaseSearch('');
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const navigateGoogleSearch = (url: string) => {
@@ -44,21 +47,19 @@ const DiseaseSearch: React.FC = () => {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-        placeholder="질환명 검색..."
-      />
-      {/* <ul>
-        {results.length > 0
-          ? results.map((result) => <DiseaseItem key={result.sickCd} data={result} />)
-          : query && <li>검색 결과 없음</li>}
-      </ul> */}
+    <>
+      <StyledSearchLayout>
+        <Input onKeyDown={moveKeyword} />
+        <Button>검색</Button>
+      </StyledSearchLayout>
       <DiseaseList diseases={diseases} selectedIndex={selectedIndex} />
-    </div>
+    </>
   );
 };
 
 export default DiseaseSearch;
+
+const StyledSearchLayout = styled.div`
+  display: flex;
+  flex: auto;
+`;

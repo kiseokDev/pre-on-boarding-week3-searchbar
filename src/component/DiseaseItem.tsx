@@ -11,7 +11,7 @@ type DiseaseItemProps = {
 const DiseaseItem: React.FC<DiseaseItemProps> = ({ disease, $isSelected }) => {
   return (
     <StyledItem $isSelected={$isSelected}>
-      <AiOutlineSearch size='34' />
+      <AiOutlineSearch size="34" />
       <StyledButton>{disease.sickNm}</StyledButton>
     </StyledItem>
   );
@@ -23,7 +23,7 @@ const StyledItem = styled.li<{ $isSelected: boolean }>`
   gap: 15px;
   margin-bottom: 20px;
 
-  ${(props) =>
+  ${props =>
     props.$isSelected &&
     css`
       background-color: var(--gray-100);
