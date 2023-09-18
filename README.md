@@ -22,9 +22,10 @@
 
 ## 🔗 배포 링크
 
-https://pre-on-boarding-week2-gitissue.vercel.app/
+[https://pre-on-boarding-week2-gitissue.vercel.app/](https://pre-on-boarding-week3-searchbar.vercel.app/)
+![sick](https://github.com/kiseokDev/pre-on-boarding-week3-searchbar/assets/107299502/a7f2d1cd-16e0-4033-9965-188c7f50887f)
 
-![image](https://github.com/kiseokDev/pre-on-boarding-week2-gitissue/assets/107299502/dab41e2b-4319-4dd3-8487-66d34c8b75fb)
+
 
 
 <br>
